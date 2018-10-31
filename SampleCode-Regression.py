@@ -122,7 +122,6 @@ plt.scatter(Xp_test.iloc[ : ,[1]], yp_test,  color='black')
 yp_pred =  ols2.predict(Xp_test)
 
 # Computer and print R^2 and RMSE
-# your code here
 
 print("R^2: {}".format(ols2.score(Xp_test, yp_test)))
 rmse = np.sqrt(mean_squared_error(yp_test, yp_pred))
@@ -218,7 +217,7 @@ ridge = Ridge(normalize = True, alpha = 0.1)
 # Setup the GridSearchCV object called grid_ridge for 5 folds using the param_grid above and ridge object
 grid_ridge = GridSearchCV(ridge, param_grid, cv = 5)
 
-# Train the model using the training sets 5 folds for all lambdas!
+# Train the model using the training sets 5 folds for all lambdas
 
 
 grid_ridge.fit(X_train, y_train)
